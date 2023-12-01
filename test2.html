@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha384-VVl5N+po6aCrjFewL2oUpGO9kQ2IV5Q8R6FFQwUyRRqRGxGCfo9x6kT5ofBWz6g7" crossorigin="anonymous">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+<style>
+  .darkBlue {
+    color: #004d5c;
+  }
+
+  .upper {
+    text-transform: uppercase;
+  }
+
+  .buttoncol {
+    background: #1b8ca8;
+  }
+
+  .fontrobot {
+    font-family: 'Saira Extra Condensed', sans-serif;
+  }
+
+  .font2 {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  /* navbar  */
+  .show {
+    display: block;
+  }
+
+  .link-transition {
+    position: relative;
+    transition: 0.3s ease;
+  }
+
+  .link-transition::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #004d5c;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .link-transition:hover::after,
+  .link-transition.underline::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  .link-transition:hover {
+    color: #004d5c;
+    /* Text color on hover */
+  }
+</style>
+
+<body class="font-sans">
+  <header class="bg-cover bg-center h-screen flex flex-col items-center pt-10 relative"
+    style="background: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(255, 255, 255, 0)), url('./img/last.jpg'); background-size: cover; box-sizing: border-box;">
+
+
+    <!-- Navbar -->
+    <nav class="flex flex-col md:flex-row items-center justify-between bg-transparent w-5/6 ">
+      <!-- Left side with logo and title -->
+      <div class="flex flex-row p-6 ml-10">
+        <img src="./images/travel-your-way.png" alt="Logo" class="h-16">
+        <h1 class="text-white text-3xl   font2 pl-4 pt-4  font-semibold">Leisure Lime</h1>
+      </div>
+
+      <!-- Hamburger button for mobile -->
+      <div class="flex md:hidden">
+        <button id="hamburger">
+          <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40"
+            height="40" />
+          <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40"
+            height="40" />
+        </button>
+      </div>
+
+      <!-- Right side navigation links -->
+      <div
+        class="toggle hidden w-full md:w-auto md:flex flex-row-reverse text-right text-bold mt-5 md:mt-0 border-b-2 border-blue-900 md:border-none border border-blue-500">
+        <a href="#"
+          class="block md:inline-block text-white px-3 py-3 text-2xl md:border-none font-robot link-transition">CONTACT</a>
+        <a href="#"
+          class="block md:inline-block text-2xl text-white px-3 py-3 text-2xl md:border-none font-robot link-transition">TOUR-PACKAGE</a>
+        <a href="#"
+          class="block md:inline-block text-2xl text-white px-3 py-3 text-2xl md:border-none font-robot link-transition">ABOUT</a>
+        <a href="#"
+          class="block md:inline-block text-2xl text-white px-3 py-3 text-2xl md:border-none font-robot  link-transition hover:text-004d5c">HOME</a>
+      </div>
+
+      <!-- Login button on the right side -->
+      <a href="#"
+        class="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right border border-blue-100 hover:bg-gray-900 text-white rounded-lg text-2xl fontrobot">Login</a>
+    </nav>
+
+
+
+
+    <script>
+      document.getElementById("hamburger").onclick = function toggleMenu() {
+        const navToggle = document.getElementsByClassName("toggle");
+        for (let i = 0; i < navToggle.length; i++) {
+          navToggle.item(i).classList.toggle("hidden");
+        }
+      };
+    </script>
+
+
+    <div class="flex flex-col lg:flex-row items-center justify-start text-left pt-20">
+
+      <!-- Text Section -->
+      <div class="darkBlue w-full lg:w-1/2 px-6 lg:px-44 text-center lg:text-left">
+        <p class="py-2 font-bold ">The Leisure Life</p>
+        <h1
+          class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl upper fontrobot font-bold mb-4">
+          Never stop exploring the world</h1>
+        <p class="text-sm font-medium fontrobot sm:text-base lg:text-lg">Discover amazing destinations and create
+          unforgettable
+          memories. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores eius quasi adipisci pariatur aspernatur?</p>
+        <button class="buttoncol hover:bg-blue-700 text-white py-1 px-6 sm:px-8 rounded-full mt-6">
+          SEE MORE
+        </button>
+      </div>
+      <!-- Cards Section -->
+      <!-- Cards Section -->
+      <div class="w-full lg:w-1/2 flex lg:flex-row items-center justify-center">
+        <div class="w-full sm:w-64 h-48 sm:h-64 lg:h-96 rounded-2xl my-10 md:my-10 md:mx-4 mx-2 sm:my-4 lg:mx-4">
+          <img id="cardImage1" src="./img/bg1.jpg" alt="Card Image" class="w-full h-full object-cover rounded-2xl">
+        </div>
+        <div class="w-full sm:w-64 h-48 sm:h-64 lg:h-96 rounded-2xl my-10 md:my-10 md:mx-4 mx-2 sm:my-4 lg:mx-4">
+          <img id="cardImage2" src="./img/bg13.jpg" alt="Card Image" class="w-full h-full object-cover rounded-2xl">
+        </div>
+        <div class="w-full sm:w-64 h-48 sm:h-64 lg:h-96 rounded-2xl my-10 md:my-10 mx-2 md:mx-4 sm:my-4 lg:mx-4">
+          <img id="cardImage3" src="./img/bg2.jpg" alt="Card Image" class="w-full h-full object-cover rounded-2xl">
+        </div>
+      </div>
+
+      <script>
+        // JavaScript to change images automatically every 3 seconds
+        let currentImageIndex = 0;
+        const images = [
+          "./img/bg5.jpg",
+          "./img/bg7.jpg",
+          "./img/bg6.jpg",
+          "./img/bg9.jpg",
+          "./img/bg10.jpg",
+          "./img/bg11.jpg",
+        ];
+
+        function changeImage() {
+          // Update the image source for each card
+          document.getElementById("cardImage1").src = images[currentImageIndex];
+          document.getElementById("cardImage2").src = images[(currentImageIndex + 1) % images.length];
+          document.getElementById("cardImage3").src = images[(currentImageIndex + 2) % images.length];
+
+          // Move to the next image or loop back to the first one
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        // Set interval to change image every 3 seconds
+        setInterval(changeImage, 3000);
+      </script>
+
+
+
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Content Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Featured Destinations</h2>
+    <!-- Add your content here -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8">
+    <div class="container mx-auto text-center">
+      &copy; 2023 Your Travel Website. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Gets the Mobile Nav icon by its ID
+    let bars = document.getElementById('bars');
+
+    // Gets the Mobile Nav container
+    let mobileMenu = document.getElementById('mobileMenu');
+
+    // Displays the Mobile Nav when clicked and changes the Nav Icon from three bars to an 'X'
+    bars.addEventListener('click', function () {
+      mobileMenu.classList.toggle('show');
+      bars.classList.toggle('fa-times');
+    });
+  </script>
+</body>
+
+</html>

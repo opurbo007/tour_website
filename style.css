@@ -1,0 +1,79 @@
+body {
+   margin: 0;
+   font-family: "Arial", sans-serif;
+   height: 150vh;
+}
+
+.carousel-container {
+   position: relative;
+   overflow: hidden;
+}
+
+.carousel-item {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+
+.carousel-item.active {
+   display: block;
+}
+
+.h-75 {
+   height: 60vh;
+}
+
+.darkBlue {
+   color: #004d5c;
+}
+
+.upper {
+   text-transform: uppercase;
+}
+
+.buttoncol {
+   background: #1b8ca8;
+}
+
+.fontrobot {
+   font-family: "Saira Extra Condensed", sans-serif;
+}
+
+.font2 {
+   font-family: "Dancing Script", cursive;
+}
+
+/* navbar  */
+.show {
+   display: block;
+}
+
+.link-transition {
+   position: relative;
+   transition: 0.3s ease;
+}
+
+.link-transition::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #004d5c;
+   bottom: 0;
+   left: 0;
+   transform-origin: bottom right;
+   transform: scaleX(0);
+   transition: transform 0.3s ease;
+}
+
+.link-transition:hover::after,
+.link-transition.underline::after {
+   transform-origin: bottom left;
+   transform: scaleX(1);
+}
+
+.link-transition:hover {
+   color: #004d5c;
+}
