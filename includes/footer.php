@@ -5,7 +5,7 @@
 
 
 
-			<h1 class="text-white text-3xl font-bold font2">THE LEISURE LIFE</h1>
+			<h1 class="text-white text-3xl font-bold ">THE LEISURE LIFE</h1>
 		</div>
 
 		<p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
@@ -17,32 +17,35 @@
 			<li>
 				<a class="text-gray-700 transition hover:text-gray-700/75 text-white 
 					
-					hover:text-white/75" href="/">
+					hover:text-white/75" href="page.php?type=aboutus">
 					About
 				</a>
 			</li>
 
 			<li>
-				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white hover:text-white/75" href="/">
+				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white hover:text-white/75"
+					href="page.php?type=contact">
 					Contact
 				</a>
 			</li>
 
 			<li>
-				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/">
+				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+					href="page.php?type=terms">
 					Privacy
 				</a>
 			</li>
 
 			<li>
-				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/">
+				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+					href="page.php?type=Service">
 					Services
 				</a>
 			</li>
 
 			<li>
 				<a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-					href="./terms.php">
+					href="page.php?type=terms">
 					Terms & Conditions
 				</a>
 			</li>
@@ -51,7 +54,7 @@
 
 		<ul class="mt-12 flex justify-center gap-6 md:gap-8">
 			<li>
-				<a href="/" rel="noreferrer" target="_blank"
+				<a href="#" rel="noreferrer" target="_blank"
 					class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
 					<span class="sr-only">Facebook</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -63,7 +66,7 @@
 			</li>
 
 			<li>
-				<a href="/" rel="noreferrer" target="_blank"
+				<a href="#" rel="noreferrer" target="_blank"
 					class="text-gray-700 transition hover:text-gray-700/75 text-white hover:text-white/75">
 					<span class="sr-only">Instagram</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -75,7 +78,7 @@
 			</li>
 
 			<li>
-				<a href="/" rel="noreferrer" target="_blank"
+				<a href="#" rel="noreferrer" target="_blank"
 					class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
 					<span class="sr-only">Twitter</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -86,7 +89,7 @@
 			</li>
 
 			<li>
-				<a href="/" rel="noreferrer" target="_blank"
+				<a href="#" rel="noreferrer" target="_blank"
 					class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
 					<span class="sr-only">GitHub</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -98,7 +101,7 @@
 			</li>
 
 			<li>
-				<a href="/" rel="noreferrer" target="_blank"
+				<a href="#" rel="noreferrer" target="_blank"
 					class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
 					<span class="sr-only">Dribbble</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
