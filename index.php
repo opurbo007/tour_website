@@ -69,7 +69,24 @@ include('includes/config.php');
 
 		<div class="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
 			<?php
-			$sql = "SELECT * from tbltourpackages LIMIT 3"; // Fetch four posts
+			$sql = "SELECT 
+		PackageId, 
+		PackageName, 
+		PackageType, 
+		PackageLocation, 
+		PackagePrice, 
+		PackageFetures, 
+		PackageDetails, 
+		PackageImage, 
+		Creationdate, 
+		UpdationDate 
+FROM 
+		tbltourpackages 
+ORDER BY 
+		Creationdate DESC 
+LIMIT 3";
+
+			// Fetch four posts
 			$query = $dbh->prepare($sql);
 			$query->execute();
 			$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -187,7 +204,7 @@ include('includes/config.php');
 
 	</section>
 	<div class="flex flex-col items-center justify-center pb-4"> <span
-			class="rounded-full bg-indigo-500 px-2 py-1 text-white uppercase text-sm"> <a href="">View More
+			class="rounded-full bg-indigo-500 px-2 py-1 text-white uppercase text-sm"> <a href="./package-list.php">View More
 				Package</a></span>
 	</div>
 
